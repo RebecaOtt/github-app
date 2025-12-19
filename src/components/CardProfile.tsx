@@ -1,4 +1,4 @@
-import type { User } from '../pages/UserData';
+import type { User } from '../interfaces/Type';
 
 interface CardProfileProps {
     user: User;

@@ -4,7 +4,6 @@ interface FormProps {
     onSubmit: (username: string) => void;
 }
 
-
 export function Form ({onSubmit} : FormProps){
     const [userName, setUserName] = useState("");
 
@@ -12,7 +11,6 @@ export function Form ({onSubmit} : FormProps){
         e.preventDefault();
         onSubmit(userName);
     }
-
 
     return(
         <form className="flex flex-col w-80 mx-auto" onSubmit={handleSubmit}>
@@ -30,7 +28,7 @@ export function Form ({onSubmit} : FormProps){
             )}
             />
 
-            <input className="bg-[#05478A] text-white p-2 mt-10 rounded-[4px] w-full text-center cursor-pointer" 
+            <input className="bg-blue text-white p-2 mt-10 rounded-[4px] w-full text-center cursor-pointer" 
             type="submit" 
             value="Entrar" 
             />

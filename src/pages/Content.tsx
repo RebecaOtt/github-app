@@ -35,7 +35,7 @@ export function Content() {
 
     return (
         <main className="min-h-screen grid lg:grid-cols-2">
-            <div className="bg-[#05478A] flex items-center hidden lg:flex justify-center">
+            <div className="bg-blue flex items-center hidden lg:flex justify-center">
                 <img src={logo} alt="logo" className="w-[307px]" />
             </div>
 
@@ -51,7 +51,7 @@ export function Content() {
                 }
 
                 <header>
-                    <h1 className="text-4xl font-bold text-[#303030] mb-10 ">Entrar</h1>
+                    <h1 className="text-4xl font-bold text-brown mb-10 ">Entrar</h1>
                 </header>
                 <section>
                     <div>

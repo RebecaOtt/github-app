@@ -10,24 +10,7 @@ import { Sppiner } from "../components/Spinner";
 import { Select } from "../components/Select";
 import { ModalRepositories } from "../components/ModalRepositories";
 import { Header } from "../components/Header";
-
-export interface User {
-    login: string;
-    name: string;
-    bio: string;
-    avatar_url: string;
-    repos_url: string
-}
-
-export interface Repos {
-    id: number;
-    name: string;
-    description: string;
-    visibility: string;
-    html_url: string;
-    language: string;
-
-}
+import type { Repos, User } from '../interfaces/Type';
 
 export function UserData() {
     const { userId } = useParams();
@@ -116,10 +99,10 @@ export function UserData() {
                     </div>
                 ) : (
                     <>
-                        <h1 className='text-[#333333] text-2xl font-bold ml-10 pt-10'>Informações do Perfil</h1>
+                        <h1 className='text-brown-title text-2xl font-bold ml-10 pt-10'>Informações do Perfil</h1>
                         {user && <CardProfile user={user!} />}
 
-                        <h1 className='text-[#333333] text-2xl font-bold ml-10'>Repositórios</h1>
+                        <h1 className='text-brown-title text-2xl font-bold ml-10'>Repositórios</h1>
                             {reposList.length > itemsPerView && (
                                 <div className='mx-4 md:mx-6 lg:mx-15'>
                                     <Select
@@ -149,9 +132,7 @@ export function UserData() {
 
                     </>
                 )}
-
-
-
+                
             </main>
         </div>
     )
